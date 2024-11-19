@@ -1,0 +1,274 @@
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+header,
+main,
+footer {
+    flex: 1;
+}
+
+body {
+    background: url("../images/background.jpg") no-repeat fixed center center;
+    background-size: cover;
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+}
+
+a {
+    text-decoration: none;
+}
+
+header {
+    display: flex;
+    box-shadow: 1px 2px 5px #222;
+    background: rgb(0, 0, 0, 0.4);
+    top: 0vh;
+    position: relative;
+    height: 10vh;
+    min-height: 60px;
+}
+
+#container-menu a{
+    color: #DDD;
+}
+
+nav {
+    display: flex;
+    align-content: center;
+}
+
+nav .active a,
+nav a:hover {
+    color: #DDD;
+}
+
+#container-icon {
+    display: flex;
+    gap: 20px;
+}
+
+.icon img {
+    width: 50px;
+}
+
+#container-menu {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+#menu ul {
+    display: flex;
+    padding: 0;
+}
+
+#menu ul li {
+    list-style: none;
+    padding: 15px;
+}
+
+.buy-buttom {
+    padding: 12px;
+    border-radius: 2px;
+    transform: skew(-10deg);
+    background-color: #d1a649;
+    font-weight: bold;
+}
+
+.buy-buttom:hover {
+    color: #000;
+    background-color: #DDD;
+    transition: all 0.3s;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 80vh;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+#container-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: auto;
+    
+}
+
+.img-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#container-buttoms {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+}
+
+.buy-steam {
+    width: 250px;
+    padding: 12px;
+    border-radius: 5px;
+    transform: skew(-10deg);
+    background-color: #FFF;
+    color: #03092c;
+    font-weight: bold;
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 64px;
+}
+
+.buy-steam img {
+    width: 40px;
+}
+
+.buy-steam:hover {
+    background-color: #9ecff0;
+    transition: all 0.3s;
+}
+
+.buy-playStore {
+    display: flex;
+    align-items: center;
+    width: 130px;
+    height: 64px;
+    background-color: #FFF;
+    padding: 20px;
+    border-radius: 5px;
+    transform: skew(-10deg);
+}
+
+.buy-playStore img {
+    width: 100%;
+}
+
+.buy-playStore:hover {
+    background-color: #dcffe7;
+    transition: all 0.3s;
+}
+
+.img-container p {
+    text-align: justify;
+    max-width: 465px;
+    background-color: #0f7c47;
+    background-image: linear-gradient(120deg, #53b157, #0f7c47);
+    padding: 20px;
+    border-radius: 10px;
+    font-weight: bold;
+    color: #DDD;
+}
+
+.menuMobile {
+    display: none;
+    width: 40px;
+    height: 40px;
+}
+
+.mm_line {
+    height: 3px;
+    background-color: #d1a649;
+}
+
+footer {
+    position: static;
+    bottom: 0vh;
+}
+
+#container-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(0, 0, 0, 0.5);
+    text-align: center;
+    color: #DDD;
+    font-weight: bold;
+    width: 100%;
+    height: 10vh;
+    min-height: 60px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+@media (max-width:1000px) {
+
+    #container-menu {
+        justify-content: start;
+    }
+
+    nav ul {
+        flex-direction: column;
+        display: none;
+        left: 0;
+        width: 100%;
+        background: #064785;
+        position: absolute;
+        top: 99%;
+    }
+
+    nav ul li:hover {
+        background-color: #03092c;
+        font-weight: bold;
+    }
+
+    #container-icon {
+        flex: 1;
+    }
+
+    #menu {
+        padding-right: 40px;
+    }
+
+    .menuMobile {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    ul {
+        margin: 0;
+    }
+
+}
+
+@media (max-width:500px) {
+
+    #menu {
+        padding-left: 40px;
+        padding-right: 0;
+    }
+
+    .img-container img {
+        width: 200px;
+    }
+
+    .buy-buttom {
+        display: none;
+    }
+
+    #container-buttoms {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+}

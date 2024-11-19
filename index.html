@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stardew Valley</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+        rel="stylesheet">
+
+    <script type="text/javascript">
+        window.onload = function () {
+            const menuList = document.querySelector("#menu nav ul");
+
+            if (window.innerWidth < 1000) {
+                menuList.style.display = 'none';
+            }
+
+            document.querySelector(".menuMobile").addEventListener("click", function () {
+
+                if (menuList.style.display === 'flex') {
+                    menuList.style.display = 'none';
+                } else {
+                    menuList.style.display = 'flex';
+                }
+            });
+
+            window.addEventListener('resize', function () {
+                if (window.innerWidth >= 1000) {
+                    menuList.style.display = 'flex';
+                } else {
+                    menuList.style.display = 'none';
+                }
+            });
+        };
+    </script>
+</head>
+
+<body>
+    <header>
+        <div id="container-menu">
+            <div id="container-icon">
+                <a href="">
+                    <div class="icon">
+                        <img src="assets/images/icone-white.png" alt="user">
+                    </div>
+                </a>
+
+                <a href="">
+                    <div class="icon">
+                        <img src="assets/images/lupa.png" alt="lupa">
+                    </div>
+                </a>
+            </div>
+
+            <div id="menu">
+                <nav>
+                    <div class="menuMobile">
+                        <div class="mm_line"></div>
+                        <div class="mm_line"></div>
+                        <div class="mm_line"></div>
+                    </div>
+
+                    <ul>
+                        <li class="active"><a href="">Visão geral</a></li>
+                        <li><a href="">Mídia</a></li>
+                        <li><a href="">Explorar</a></li>
+                        <li><a href="">Progresso</a></li>
+                        <li><a href="">Comunidade</a></li>
+                        <li><a href="">Suporte</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+
+            <div class="buttom">
+                <a href="https://store.steampowered.com/app/413150/Stardew_Valley/">
+                    <div class="buy-buttom">Comprar</div>
+                </a>
+            </div>
+
+        </div>
+    </header>
+
+    <main>
+        <div id="container-main">
+            <div class="img-container">
+                <img src="assets/images/logo.png" alt="Stardew Valley">
+                <p>
+                    Você herdou a antiga fazenda do seu avô, em Stardew Valley. Com ferramentas de segunda-mão e algumas
+                    moedas, você parte para dar início a sua nova vida. Será que você vai aprender a viver da terra, a
+                    transformar esse matagal em um próspero lar?
+                </p>
+
+            </div>
+
+            <div id="container-buttoms">
+                <a href="https://store.steampowered.com/app/413150/Stardew_Valley/">
+                    <div class="buy-steam">
+                        <img src="assets/images/Steam-logo.png" alt="Logo da Steam">
+                        Comprar
+                    </div>
+                </a>
+
+                <a href="https://play.google.com/store/apps/details?id=com.chucklefish.stardewvalley&hl=pt_BR">
+                    <div class="buy-playStore">
+                        <img src="assets/images/googlePlay-logo.png" alt="Logo da Play Store">
+                    </div>
+                </a>
+            </div>
+        </div>
+    </main>
+    
+    <footer>
+        <div id="container-footer">
+            Desenvolvido por Rosana Celine para fins de estudo.
+        </div>
+    </footer>
+</body>
+
+</html>
